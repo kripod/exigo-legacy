@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Button } from 'reactstrap';
 
 type Props = {
@@ -14,10 +14,10 @@ export default function Assessment({
   incorrectAnswerChoices,
   answerShufflingFunction = (answerChoices: string[]) => answerChoices.sort(),
 }: Props) {
-  const shuffledAnswerChoices = answerShufflingFunction([
-    correctAnswer,
-    ...incorrectAnswerChoices,
-  ]);
+  const shuffledAnswerChoices = useMemo(
+    () => answerShufflingFunction([correctAnswer, ...incorrectAnswerChoices]),
+    [answerShufflingFunction, correctAnswer, incorrectAnswerChoices],
+  );
 
   const [submittedAnswer, setSubmittedAnswer] = useState<string | null>(null);
 
