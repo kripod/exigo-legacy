@@ -5,7 +5,8 @@ type Props = {
   question: string;
   correctAnswer: string; // TODO: Support other data types
   incorrectAnswerChoices: string[];
-  answerShufflingFunction: (answerChoices: string[]) => string[];
+  answerShufflingFunction?: (answerChoices: string[]) => string[];
+  className?: string;
 };
 
 export default function Assessment({
@@ -13,6 +14,7 @@ export default function Assessment({
   correctAnswer,
   incorrectAnswerChoices,
   answerShufflingFunction = (answerChoices: string[]) => answerChoices.sort(),
+  ...props
 }: Props) {
   const shuffledAnswerChoices = useMemo(
     () => answerShufflingFunction([correctAnswer, ...incorrectAnswerChoices]),
@@ -22,7 +24,7 @@ export default function Assessment({
   const [submittedAnswer, setSubmittedAnswer] = useState<string | null>(null);
 
   return (
-    <div>
+    <div {...props}>
       <p className="mb-0">{question}</p>
 
       <div className="mr-n3">
