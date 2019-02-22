@@ -1,6 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
+import Header from './Header';
+
+import '../utils/bootstrap.scss';
 
 type Props = {
   children: React.ReactNode;
@@ -29,7 +32,7 @@ export default function Layout({ children }: Props) {
         <meta name="description" content={data.site.siteMetadata.description} />
       </Helmet>
 
-      <header>{/* TODO */}</header>
+      <Header title={data.site.siteMetadata.title} />
 
       <main>{children}</main>
 
