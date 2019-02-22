@@ -25,8 +25,8 @@ export default function Assessment({
     <div>
       <p className="mb-0">{question}</p>
 
-      <div>
-        {shuffledAnswerChoices.map((answerChoice, i) => {
+      <div className="mr-n3">
+        {shuffledAnswerChoices.map(answerChoice => {
           let color = 'secondary';
           if (submittedAnswer != null) {
             if (answerChoice === correctAnswer) {
@@ -46,9 +46,7 @@ export default function Assessment({
               }
               outline={color === 'secondary'}
               color={color}
-              className={`mt-3 ${
-                i < shuffledAnswerChoices.length - 1 ? 'mr-3' : ''
-              }}`}
+              className="mt-3 mr-3"
             >
               {answerChoice}
             </Button>
