@@ -71,5 +71,5 @@ TODO
 - [x] [Prettier](https://prettier.io/)
 - [x] [ESLint](https://eslint.org/)
 - [ ] [Jest](https://jestjs.io/)
-- [ ] [Travis CI](https://travis-ci.org/)
-- [ ] [Netlify](https://www.netlify.com/)
+- [x] [Travis CI](https://travis-ci.org/)
+- [x] [Netlify](https://www.netlify.com/)
