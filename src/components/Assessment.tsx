@@ -27,7 +27,7 @@ export default function Assessment({
     <div {...props}>
       <p className="mb-0">{question}</p>
 
-      <div className="mr-n3">
+      <div className="ml-n3">
         {shuffledAnswerChoices.map(answerChoice => {
           let color = 'secondary';
           if (submittedAnswer != null) {
@@ -48,7 +48,7 @@ export default function Assessment({
               }
               outline={color === 'secondary'}
               color={color}
-              className="mt-3 mr-3"
+              className="mt-3 ml-3"
             >
               {answerChoice}
             </Button>
