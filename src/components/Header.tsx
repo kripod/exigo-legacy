@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import {
   Collapse,
@@ -23,8 +24,9 @@ export default function Header({ title }: Props) {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        {/* TODO: Use gatsby link instead */}
-        <NavbarBrand href="/">{title}</NavbarBrand>
+        <NavbarBrand tag={Link} to="/">
+          {title}
+        </NavbarBrand>
 
         <NavbarToggler onClick={() => setOpen(!open)} />
         <Collapse isOpen={open} navbar>
