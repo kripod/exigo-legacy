@@ -4,7 +4,7 @@ TODO
 
 ## 🗺️ Roadmap
 
-- [ ] Minimalistic demo app using [Reactstrap](https://reactstrap.github.io/)
+- [x] Minimalistic demo app using [Reactstrap](https://reactstrap.github.io/)
 - [ ] Responsive font sizing
 - [ ] Randomize order of questions and answers
 - [ ] Show only a single page of questions at once
@@ -15,7 +15,7 @@ TODO
   - [ ] Shown only at the end
   - [ ] Shown on failure or success (based on score)
 - [ ] Answer types
-  - [ ] Single choice
+  - [x] Single choice
   - [ ] Multiple choice
   - [ ] Boolean
   - [ ] Number
@@ -52,9 +52,9 @@ TODO
 
 #### 🖼️ Frontend
 
-- [ ] [Gatsby](https://www.gatsbyjs.org/)
-- [ ] [TypeScript](https://www.typescriptlang.org/)
-- [ ] [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [x] [Gatsby](https://www.gatsbyjs.org/)
+- [x] [TypeScript](https://www.typescriptlang.org/)
+- [x] [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [ ] [styled-compoments](https://www.styled-components.com/)
 
 #### 🔒 Backend
@@ -65,8 +65,8 @@ TODO
 
 #### 🏭 Infrastructure
 
-- [ ] [Prettier](https://prettier.io/)
-- [ ] [ESLint](https://eslint.org/)
+- [x] [Prettier](https://prettier.io/)
+- [x] [ESLint](https://eslint.org/)
 - [ ] [Jest](https://jestjs.io/)
 - [ ] [Travis CI](https://travis-ci.org/)
 - [ ] [Netlify](https://www.netlify.com/)
