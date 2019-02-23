@@ -16,8 +16,7 @@ export default function QuizTemplate({ data }: Props) {
   return (
     <Layout>
       <Container tag={Measure}>
-        {/* TODO: Read title from JSON */}
-        <h2>Makroökonómia kvíz</h2>
+        <h2>{data.json.title}</h2>
 
         {shuffledAssessments.map((assessment, i) => (
           <Assessment
@@ -43,6 +42,7 @@ export const query = graphql`
   query($slug: String!) {
     json(fields: { slug: { eq: $slug } }) {
       id
+      title
       assessments {
         question
         correctAnswer
