@@ -53,7 +53,6 @@
 - [ ] [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [ ] [styled-compoments](https://www.styled-components.com/)
 
-
 ### 🔒 Backend
 
 - [ ] [Auth0](https://auth0.com/)
