@@ -13,9 +13,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  return graphql(`
+
+  const result = await graphql(`
     {
       allJson {
         edges {
@@ -27,15 +28,15 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
-    result.data.allJson.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: resolve('./src/templates/quiz.tsx'),
-        context: {
-          slug: node.fields.slug,
-        },
-      });
+  `);
+
+  result.data.allJson.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: resolve('./src/templates/quiz.tsx'),
+      context: {
+        slug: node.fields.slug,
+      },
     });
   });
 };
